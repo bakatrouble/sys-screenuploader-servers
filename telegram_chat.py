@@ -57,10 +57,10 @@ def index():
 @click.option('--port', '-p', envvar='PORT', default=8080, type=int)
 @click.option('--token', '-t', envvar='BOT_TOKEN', type=str)
 @click.option('--chat', '-c', envvar='CHAT_ID', type=str)
-def start(host, port, token, chat_id):
+def start(host, port, token, chat):
     global BOT_TOKEN, CHAT_ID
     BOT_TOKEN = token
-    CHAT_ID = chat_id
+    CHAT_ID = chat
     run(host=host, port=port)
 
 
