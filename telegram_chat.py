@@ -8,16 +8,21 @@ from PIL import Image
 from bottle import route, run, request, BaseRequest, HTTPError, default_app
 from moviepy.video.io.VideoFileClip import VideoFileClip
 from telegram import Bot
-
+from telegram.utils.request import Request
 
 BaseRequest.MEMFILE_MAX = 1024 * 1024 * 100
 
 global BOT_TOKEN, CHAT_ID
 
 
+req = Request()
+# req = Request(proxy_url='socks5h://',
+#               urllib3_proxy_kwargs={'username': '', 'password': ''})
+
+
 @route('/', method='POST')
 def index():
-    bot = Bot(BOT_TOKEN)
+    bot = Bot(BOT_TOKEN, request=req)
 
     if 'filename' not in request.params:
         raise HTTPError(400, 'filename param is missing')

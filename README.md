@@ -17,7 +17,7 @@ Saves sent media to a local directory
 Requirements: just common
 
 
-### [telegram.py](./telegram.py)
+### [telegram_chat.py](./telegram_chat.py)
 Sends media to a Telegram chat/channel
 
 Requirements: `python-telegram-bot moviepy pillow`
