@@ -1,4 +1,5 @@
--r common.txt
+bottle==0.12.18
+Click==7.0
 certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
