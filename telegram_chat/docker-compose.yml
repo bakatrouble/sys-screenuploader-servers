@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: "3.7"
+services:
+  sys-screenuploader-tc:
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+     - .env
+    environment:
+      - HOST=${HOST}
+      - PORT=${PORT}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - CHAT_ID=${CHAT_ID}

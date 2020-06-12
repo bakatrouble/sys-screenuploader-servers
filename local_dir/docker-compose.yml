@@ -1,0 +1,16 @@
+# docker-compose.yml
+version: "3.7"
+services:
+  sys-screenuploader:
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ${HOST_OUTPUT}:/opt/sys-screenuploader-servers/${OUTPUT_DIR}
+    env_file:
+     - .env
+    environment:
+      - HOST=${HOST}
+      - PORT=${PORT}
+      - OUTPUT_DIR=${OUTPUT_DIR}
+      - HOST_OUTPUT=${HOST_OUTPUT}
