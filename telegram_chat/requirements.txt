@@ -10,7 +10,7 @@ idna==2.8
 imageio==2.6.1
 imageio-ffmpeg==0.3.0
 moviepy==1.0.1
-numpy==1.18.1
+numpy==1.22.0
 Pillow==7.0.0
 proglog==0.1.9
 pycparser==2.19
